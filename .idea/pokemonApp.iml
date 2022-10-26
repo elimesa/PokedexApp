@@ -8,6 +8,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Runner.xcworkspace/xcuserdata" />
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral" />
+      <excludeFolder url="file://$MODULE_DIR$/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/swiftpm" />
+      <excludeFolder url="file://$MODULE_DIR$/macos/Runner.xcworkspace/xcshareddata/swiftpm" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
