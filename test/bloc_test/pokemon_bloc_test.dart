@@ -11,12 +11,12 @@ import 'package:pokedex_app/src/repository/pokemon_repository_base.dart';
 void main() {
 
 
-  group('News Test', () {
+  group('pokemon Test', () {
     final pokemon = Pokemon(id: 11, name: "metapod");
     final mockRepo = MocksPokemonRepositoryBase();
 
     blocTest<PokemonCubit, PokemonState>(
-      'News will be loaded correctly',
+      'pokemon will be loaded correctly',
       build: () {
         when(mockRepo.topHeadLines(any)).thenAnswer((_) async => [pokemon]);
         return PokemonCubit(mockRepo);
@@ -27,18 +27,5 @@ void main() {
         PokemonLoadSuccess(listPokemon: [pokemon], canLoadNextPage: false)
       ],
     );
-
-    /*blocTest<PokemonCubit, PokemonState>(
-      'When the Api key is not valid exception is handled correctly',
-      build: () {
-        when(mockRepo.topHeadLines(any)).thenAnswer((_) async => throw ApiKeyInvalidException());
-        return PokemonCubit(mockRepo);
-      },
-      act: (cubit) async => cubit.loadTopPokemon(),
-      expect: () => [
-        PokemonLoadingState(),
-        PokemonErrorState('La api Key no es valida'),
-      ],
-    );*/
   });
 }
